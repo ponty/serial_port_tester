@@ -1,4 +1,4 @@
-serial_port_tester is a Python program for testing the serial port. 
+serial_port_tester is a Python GUI program for testing or monitoring the serial port signals. 
 
 Links:
  * home: https://github.com/ponty/serial_port_tester
