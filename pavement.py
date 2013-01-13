@@ -60,7 +60,7 @@ examples = support.find_examples(root)
 @needs(
     'sloccount',
     'html',
-    'pdf',
+#    'pdf',
     #    'sdist',
     #    'nose',
     #    'tox',

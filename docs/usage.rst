@@ -1,5 +1,5 @@
 GUI
----------
+======
 
 .. program-screenshot:: python serial_port_tester.py
     :prompt:
