@@ -1,4 +1,4 @@
-from serial.tools.list_ports import comports
+from serial.tools.list_ports import comports # New in version 2.6.
 from threading import Thread
 from traits.api import Instance
 from traits.has_traits import HasTraits

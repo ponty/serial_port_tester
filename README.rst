@@ -19,14 +19,16 @@ General
  * install pip_
  * install pySerial_
  * install TraitsUI_
+ * add user to dialout group
  
 Ubuntu
 ----------
 ::
 
     sudo apt-get install python-pip
-    sudo apt-get install python-serial
     sudo apt-get install python-traitsui python-traits
+    sudo apt-get install python-serial 
+    sudo pip install -U pyserial   # 2.6 is needed
 
 
 .. _python: http://www.python.org/
