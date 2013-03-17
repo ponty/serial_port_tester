@@ -13,7 +13,6 @@ from paved.util import *
 from paved.docs import *
 from paved.pycheck import *
 from paved.pkg import *
-from sphinxcontrib import paverutils
 from pyavrutils import support
 
 
@@ -22,10 +21,10 @@ options(
         docroot='docs',
         builddir="_build",
     ),
-    pdf=Bunch(
-        builddir='_build',
-        builder='latex',
-    ),
+#    pdf=Bunch(
+#        builddir='_build',
+#        builder='latex',
+#    ),
 )
 
 
@@ -68,27 +67,6 @@ examples = support.find_examples(root)
 def alltest():
     'all tasks to check'
     pass
-
-
-@task
-@needs('sphinxcontrib.paverutils.html')
-def html():
-    pass
-
-
-@task
-@needs('sphinxcontrib.paverutils.pdf')
-def pdf():
-    fpdf = list(path('docs/_build/latex').walkfiles('*.pdf'))[0]
-    d = path('docs/_build/html')
-    d.makedirs()
-    fpdf.copy(d)
-
-
-@task
-def tox():
-    '''Run tox.'''
-    sh('tox')
 
 
 @task
