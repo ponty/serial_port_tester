@@ -73,7 +73,10 @@ class BoardWrapper(HasTraits):
         if self.serialobj:
             self.serialobj.close()
             self.serialobj = None
-        self.serialobj = serial.Serial(self.port)
+        try:
+            self.serialobj = serial.Serial(self.port)
+        except serial.serialutil.SerialException, e:
+            print '%s %s' % (self.port, e)
 
     DCD = Bool(label='DCD (1)', desc='Data Carrier Detect')
 #    RxD = String(label='RxD (2)')
